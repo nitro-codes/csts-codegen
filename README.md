@@ -1,3 +1,5 @@
+[![CI](https://github.com/nitro-codes/csts-codegen/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nitro-codes/csts-codegen/actions/workflows/ci.yml)
+
 ## Usage
 
 ### .csproj (project file)
