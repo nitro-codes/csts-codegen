@@ -18,5 +18,5 @@ jobs:
         run: dotnet pack ./src/CsTsCoder/CsTsCoder.csproj -c Release -o out
 
       - name: Push to NuGet.org
-        run: dotnet nuget push *.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+        run: dotnet nuget push ./out/$(ls ./out) -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
         

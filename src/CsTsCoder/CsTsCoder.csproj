@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.1</TargetFrameworks>
     <Title>Cs-Ts Code Generator </Title>
+	<PackageId>Nitrocodes.Automation.CsTsCoder</PackageId>
     <Authors>Diogo 'Nitro' Fernandes </Authors>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>C# to Typescript code generator. Currently only supporting DTOs tagged with [CoderEnabled]</Description>

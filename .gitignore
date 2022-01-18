@@ -9,6 +9,7 @@ bin/
 artifacts/
 models/
 src/CsTsCoder.Spin/typescript/
+out/
 .dotnet/
 .vscode/
 .vs/
