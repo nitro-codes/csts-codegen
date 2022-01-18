@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+	<Nullable>disable</Nullable>
+	<ImplicitUsings>true</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CsTsCoder\CsTsCoder.csproj" />
+  </ItemGroup>
+
+  <!--<Target Name="BuildInterfaces" BeforeTargets="PrepareForBuild">
+    <Message Importance="high" Text="Checking interfaces..." />
+    <CoderTask WorkingDirectory="Server\Controllers\" ConvertDirectory="typescript\dtos\" PathStyle="Kebab" />
+  </Target>-->
+
+</Project>
