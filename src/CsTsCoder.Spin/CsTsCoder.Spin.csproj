@@ -2,19 +2,17 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-	<Nullable>disable</Nullable>
-	<ImplicitUsings>true</ImplicitUsings>
+    <TargetFramework>net5.0</TargetFramework>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Nitrocodes.Automation.CsTsCoder" Version="2.1.2" />
-  </ItemGroup>
 
   <Target Name="BuildInterfaces" BeforeTargets="Build">
 	<Message Importance="high" Text="Checking interfaces..." />
 	<CoderTask InputDirectory="csharp\dtos\" OutputDirectory="typescript\dtos\" PathStyle="Kebab" />
   </Target>
+
+  <ItemGroup>
+    <PackageReference Include="Nitrocodes.Automation.CsTsCoder" Version="2.1.2" />
+  </ItemGroup>
 
 </Project>

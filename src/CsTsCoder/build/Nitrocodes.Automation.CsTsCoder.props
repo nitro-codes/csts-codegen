@@ -6,6 +6,9 @@
   <UsingTask TaskName="CsTsCoder.CoderTask"
              AssemblyFile="$([MSBuild]::ValueOrDefault('$(CsTsCoderAssemblyFile)', '$(MSBuildThisFileDirectory)..\lib\netstandard2.0\Nitrocodes.Automation.CsTsCoder.dll'))" />
   <UsingTask TaskName="CsTsCoder.CoderTask"
+			 AssemblyFile="$([MSBuild]::ValueOrDefault('$(CsTsCoderAssemblyFile)', '$(MSBuildThisFileDirectory)..\lib\net5.0\Nitrocodes.Automation.CsTsCoder.dll'))"
+			 Condition="'$(MSBuildRuntimeType)' == 'Core' And '$(MSBuildVersion)' &gt;= '16.10.0'" />
+  <UsingTask TaskName="CsTsCoder.CoderTask"
              AssemblyFile="$([MSBuild]::ValueOrDefault('$(CsTsCoderAssemblyFile)', '$(MSBuildThisFileDirectory)..\lib\net6.0\Nitrocodes.Automation.CsTsCoder.dll'))"
              Condition="'$(MSBuildRuntimeType)' == 'Core' And '$(MSBuildAssemblyVersion)' == '17.0'" />
 </Project>
