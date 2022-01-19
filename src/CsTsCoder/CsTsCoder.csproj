@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net6.0;netstandard2.0</TargetFrameworks>
     <AssemblyName>Nitrocodes.Automation.$(MSBuildProjectName)</AssemblyName>
     <Title>Cs-Ts Code Generator </Title>
 	<PackageId>$(AssemblyName)</PackageId>
@@ -10,15 +10,16 @@
     <Authors>Diogo 'Nitro' Fernandes </Authors>
 	<Description>C# to Typescript code generator. Currently only supporting DTOs tagged with [CoderEnabled]</Description>
     <PackageProjectUrl>https://github.com/nitro-codes/csts-codegen</PackageProjectUrl>
-    <VersionPrefix>2.1.1</VersionPrefix>
     <OutputType>Library</OutputType>
-    <Version>2.1.1</Version>
-    <RepositoryUrl>https://github.com/nitro-codes/csts-codegen</RepositoryUrl>
+	<RepositoryUrl>https://github.com/nitro-codes/csts-codegen</RepositoryUrl>
 	<Tags>Code Generation;Typescript;C#</Tags>
+    <VersionPrefix>2.1.2</VersionPrefix>
+    <!--<VersionSuffix>build$([System.DateTime]::Now.ToString('yyyyMMdd-HHmm'))</VersionSuffix>-->
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="build\*" PackagePath="build\" />
+	<Content Include="build\*" PackagePath="build\" />
+	<Content Include="buildMultiTargeting\*" PackagePath="buildMultiTargeting\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,5 +33,4 @@
     <!-- Marks all packages as 'local only' so they don't end up in the nuspec. -->
     <PackageReference Update="@(PackageReference)" PrivateAssets="All" />
   </ItemGroup>
-
 </Project>

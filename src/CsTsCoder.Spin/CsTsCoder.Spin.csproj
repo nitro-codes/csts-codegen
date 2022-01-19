@@ -9,17 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="11.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Nitrocodes.Automation.CsTsCoder" Version="2.1.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\CsTsCoder\CsTsCoder.csproj" />
-  </ItemGroup>
-
-  <!--<Target Name="BuildInterfaces" BeforeTargets="PrepareForBuild">
-    <Message Importance="high" Text="Checking interfaces..." />
-    <CoderTask WorkingDirectory="Server\Controllers\" ConvertDirectory="typescript\dtos\" PathStyle="Kebab" />
-  </Target>-->
+  <Target Name="BuildInterfaces" BeforeTargets="Build">
+	<Message Importance="high" Text="Checking interfaces..." />
+	<CoderTask InputDirectory="csharp\dtos\" OutputDirectory="typescript\dtos\" PathStyle="Kebab" />
+  </Target>
 
 </Project>

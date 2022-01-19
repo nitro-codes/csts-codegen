@@ -1,0 +1,11 @@
+﻿<!-- 
+  This file is automatically imported by NuGet into a user's project
+  when it targets a single framework, or in classic (pre 2017) csproj projects.
+-->
+<Project>
+  <UsingTask TaskName="CsTsCoder.CoderTask"
+             AssemblyFile="$([MSBuild]::ValueOrDefault('$(CsTsCoderAssemblyFile)', '$(MSBuildThisFileDirectory)..\lib\netstandard2.0\Nitrocodes.Automation.CsTsCoder.dll'))" />
+  <UsingTask TaskName="CsTsCoder.CoderTask"
+             AssemblyFile="$([MSBuild]::ValueOrDefault('$(CsTsCoderAssemblyFile)', '$(MSBuildThisFileDirectory)..\lib\net6.0\Nitrocodes.Automation.CsTsCoder.dll'))"
+             Condition="'$(MSBuildRuntimeType)' == 'Core' And '$(MSBuildAssemblyVersion)' == '17.0'" />
+</Project>
