@@ -12,12 +12,12 @@ jobs:
     name: Update NuGet package
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
 
-      - name: Installing SDKs
+      - name: Agent Setup (SDKs)
         uses: actions/setup-dotnet@v1
         with:
-            dotnet-version: | 
+          dotnet-version: | 
             3.1.x
             5.0.x
             6.0.x
